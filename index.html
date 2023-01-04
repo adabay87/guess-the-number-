@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+        
+        //let num = Math.floor(Math.random() * 11);
+
+        //Math.floor(Math.random() * 10) + 1;
+
+        let num =Math.floor(Math.random() * 10) + 1;
+
+
+        let guess = prompt("guess a number between 1 and 10");
+        let gotIt= false;//set the loop -if true ,break out of the loop
+        let counter=0;//keep track of the number of guess
+        let feedback="";
+
+        let timeTimes="times";//the plural from of time
+
+        while(gotIt == false){
+            counter++;
+
+            if(num == guess){//got it, break the loop!
+              
+                gotIt =true;//break the loop
+            }else if(num > guess){//too low!
+
+
+                guess=prompt("higher");
+
+            }else{//too high!}
+         
+                guess=prompt("lower");
+            }
+
+            }
+                if(counter == 1){ //deal with the singular
+
+                timeTimes="time";
+            }
+
+        feedback =" you got it ! the number was " + num;
+        feedback+=" and you guessed "+ counter +""+timeTimes;
+  
+
+        alert(feedback);
+        
+       
+	</script>
+</body>
+</html>
